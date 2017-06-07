@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color = "primary" align = "center">
+    <ion-title>Create Journal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form #createJournalForm="ngForm">
+    <ion-list>
+      <!--ion-item>
+        <ion-label floating>Journal Name</ion-label>
+        <ion-input name="name" type="text" required="" [(ngModel)]="createJournalModel.name"></ion-input>
+      </ion-item-->
+
+      <ion-item>
+        <ion-label stacked>Description of the Journal</ion-label>
+        <!--ion-textarea rows="10" name="description" type="text" required="" [(ngModel)]="createJournalModel.description"></ion-textarea-->
+        <ion-textarea rows="10" name="description" type="text" required="" [(ngModel)]="description"></ion-textarea>
+      </ion-item>
+                       
+    </ion-list>
+
+    <div style="margin-bottom: 8%;">
+      <button ion-button type="submit" color="primary" full (click)="createJournal()"> Create Journal </button>
+    </div>
+  </form>
+
+</ion-content>  

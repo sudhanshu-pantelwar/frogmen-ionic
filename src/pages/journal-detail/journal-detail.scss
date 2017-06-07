@@ -1,0 +1,25 @@
+page-journal-detail {
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+    .strong-border{
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+    }
+    ion-content{
+        overflow-scroll: true;
+    }
+
+    .scroll-content {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;}
+
+    .selectable {
+    -webkit-user-select: auto;
+    }
+}

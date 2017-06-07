@@ -1,0 +1,37 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary" align="center">
+    <ion-title>Supervisor Log In</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form #loginForm="ngForm">
+    <ion-card style="margin-top: 10%; margin-bottom: 5%;">
+      <ion-item>
+        <ion-img width="20" height="20" src="assets/images/username.png" style="background-color: transparent" item-left></ion-img>
+        <ion-input name="email" type="email" placeholder="Email" [(ngModel)] = "login.username" required></ion-input>
+      </ion-item>
+
+      <hr>
+      <ion-item>
+        <ion-img width="20" height="20" clear src="assets/images/password.png" style="background-color: transparent" item-left></ion-img>
+        <ion-input name="password" type="password" placeholder="Password"  [(ngModel)] = "login.password" required></ion-input>
+      </ion-item>
+      
+    </ion-card>
+    
+    <ion-card color="primary" align="center">
+      <button ion-button clear (click)="loginUser()"><font color="white">Log in</font></button>
+    </ion-card>
+	</form>
+
+</ion-content>

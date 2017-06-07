@@ -1,0 +1,11 @@
+page-login {
+    ::-webkit-scrollbar,
+    *::-webkit-scrollbar {
+    display: none;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+      }
+}

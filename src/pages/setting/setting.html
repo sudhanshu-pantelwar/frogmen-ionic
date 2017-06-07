@@ -1,0 +1,28 @@
+<!--
+  Generated template for the Setting page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" align="center">
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <h4 color="primary"><strong>Project</strong></h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label><strong>Project Name</strong></ion-label><h5>{{selectedProject.name}}</h5>
+      <ion-label><strong>Address</strong></ion-label>{{selectedProject.street}},{{selectedProject.city}}
+      <ion-label><strong>Time Zone</strong></ion-label>{{selectedProject.timezone.time_zone}}
+      <ion-label><strong>Project Description</strong></ion-label>{{selectedProject.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

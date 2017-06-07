@@ -1,0 +1,81 @@
+
+<ion-header>
+
+  <ion-navbar color="primary" align = "center">
+
+    <ion-title>{{pageTitle}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button clear (click) = "createJournal()">
+        <ion-icon name="add-circle" style="font-size: 25px; margin-right: 3%"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+      <ion-list *ngFor="let responseData1 of responseDatas2; let i = last;">
+        <!--<ion-item *ngIf="responseData1.project_id == project.id">
+            {{responseData1.description}}
+        </ion-item>-->
+        <div *ngIf="responseData1.project_id == project.id">
+            <ion-row>
+              <ion-col width-80 center>
+                
+                <a href="#" class="action_link" (click) = "gotoJournalDetailPage1(responseData1)">
+                  <h5 padding>{{responseData1.description | slice:0:15}}</h5>
+                </a>
+              </ion-col>
+                <ion-col width-20 center>
+                  <div style="right: 0; text-align: right;">
+                    <strong>Not</strong>
+                  </div>
+                  <div style="right: 0; text-align: right;">
+                    <strong>Synced</strong>
+                  </div>
+                  <div style="right: 0; text-align: right;">
+                    <strong>Yet</strong>
+                  </div>
+                  <!--div style="float: none;"></div-->
+                </ion-col>
+            </ion-row>
+          </div>
+          <div *ngIf="i == false">
+            <hr style="padding: 0; margin: 0;">
+          </div>
+      </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-list *ngFor="let responseData of responseDatas; let date of created_at; let i = last;">
+      <div>
+        <ion-row>
+          <ion-col width-80 center>
+            
+            <a href="#" class="action_link" (click) = "gotoJournalDetailPage(responseData)">
+              <h5 padding>{{responseData.description | slice:0:15}}</h5>
+            </a>
+          </ion-col>
+            <ion-col width-20 center>
+              <div style="right: 0; text-align: right;">
+                <strong>{{responseData.created_at | slice:8:10}}</strong>
+              </div>
+              <div style="right: 0; text-align: right;">
+                <strong>{{responseData.created_day}}</strong>
+              </div>
+              <div style="right: 0; text-align: right;">
+                <strong>{{responseData.created_at | slice:10:16}}</strong>
+              </div>
+              <!--div style="float: none;"></div-->
+            </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="i == false">
+        <hr style="padding: 0; margin: 0;">
+      </div>
+    </ion-list>
+  </ion-card>
+  
+</ion-content>
